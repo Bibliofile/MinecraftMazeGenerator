@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <title>Maze Generator</title>
+  <script defer src="bundle.js"></script>
+  <style>
+    canvas {
+      width: 100%;
+      image-rendering: pixelated;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="columns">
+      <div class="column">
+        <div class="box content">
+          <strong>Preview:</strong>
+          <canvas></canvas>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="box content">
+          <strong>Width (in paths):</strong>
+          <input class="input" step="5" min="10" max="100" value="20" type="number" data-for="width">
+          <strong>Height (in paths):</strong>
+          <input class="input" step="5" min="10" max="100" value="20" type="number" data-for="height">
+          <strong>Dimensions (blocks):</strong>
+          <span data-show="dimensions"></span>
+        </div>
+        <div class="box content">
+          <strong>Wall width:</strong>
+          <input class="input" min="1" max="5" value="1" type="number" data-for="wallSize">
+          <strong>Wall height:</strong>
+          <input class="input" min="1" max="50" value="3" type="number" data-for="wallHeight">
+          <strong>Path width:</strong>
+          <input class="input" min="1" max="5" value="1" type="number" data-for="walkSize">
+          <strong>Wall block:</strong>
+          <input class="input is-fullwidth" value="stone" data-for="block">
+        </div>
+        <div class="box">
+          <button class="button is-primary">Copy command</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
